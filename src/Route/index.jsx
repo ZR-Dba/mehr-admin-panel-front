@@ -1,9 +1,8 @@
-import React, { Suspense, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import Callback from "../Auth/Callback";
 import Signin from "../Auth/Signin";
 import { classes } from "../Data/Layouts";
-import Loader from "../Layout/Loader";
 import LayoutRoutes from "../Route/LayoutRoutes";
 import {
 	authHeader,
@@ -49,10 +48,10 @@ const Routers = () => {
 
 		// 							<Route
 		// 								exact
-		// 								path={`${process.env.PUBLIC_URL}`}
+		// 								path={`${process.env.REACT_APP_BASE_PATH}`}
 		// 								element={
 		// 									<Navigate
-		// 										to={`${process.env.PUBLIC_URL}/Dashboard/${layout}`}
+		// 										to={`${process.env.REACT_APP_BASE_PATH}/Dashboard/${layout}`}
 		// 									/>
 		// 								}
 		// 							/>
@@ -61,7 +60,7 @@ const Routers = () => {
 		// 								exact
 		// 								path={`/`}
 		// 								element={
-		// 									<Navigate to={`${process.env.PUBLIC_URL}/Dashboard`} />
+		// 									<Navigate to={`${process.env.REACT_APP_BASE_PATH}/Dashboard`} />
 		// 								}
 		// 							/>
 		// 						</>
@@ -71,12 +70,12 @@ const Routers = () => {
 		// 					<Route path={`/*`} element={<LayoutRoutes />} />
 		// 				</Route>
 		// 				<Route
-		// 					path={`${process.env.PUBLIC_URL}/callback`}
+		// 					path={`${process.env.REACT_APP_BASE_PATH}/callback`}
 		// 					render={() => <Callback />}
 		// 				/>
 		// 				<Route
 		// 					exact
-		// 					path={`${process.env.PUBLIC_URL}/login`}
+		// 					path={`${process.env.REACT_APP_BASE_PATH}/login`}
 		// 					element={<Signin />}
 		// 				/>
 		// 				{authRoutes.map(({ path, Component }, i) => (

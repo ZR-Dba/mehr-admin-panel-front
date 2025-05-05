@@ -4,21 +4,20 @@ import Products from "../Components/Pages/Products/productLists";
 import Users from "../Components/Pages/Users/users";
 
 export const routes = [
-
 	{
-		path: `${process.env.PUBLIC_URL}/Dashboard/:layout`,
+		path: `${process.env.REACT_APP_BASE_PATH}/Dashboard/:layout`,
 		Component: <Dashboard />,
 	},
 	{
-		path: `${process.env.PUBLIC_URL}/products/productList/:layout`,
+		path: `${process.env.REACT_APP_BASE_PATH}/products/productList/:layout`,
 		Component: <Products />,
 	},
 	{
-		path: `${process.env.PUBLIC_URL}/products/orderableProduct/:layout`,
+		path: `${process.env.REACT_APP_BASE_PATH}/products/orderableProduct/:layout`,
 		Component: <Orderable />,
 	},
 	{
-		path: `${process.env.PUBLIC_URL}/users/usersList/:layout`,
+		path: `${process.env.REACT_APP_BASE_PATH}/users/usersList/:layout`,
 		Component: <Users />,
 	},
 ];

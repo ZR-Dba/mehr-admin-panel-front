@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { H6, P , Btn} from "../../../AbstractElements";
+import { P } from "../../../AbstractElements";
 
 const OtherWay = () => {
 	return (
@@ -9,8 +9,8 @@ const OtherWay = () => {
 				<div className="flex-grow-1 border-top"></div>
 				<P attrPara={{ className: "px-3 mb-0 fw-bold text-muted" }}>
 					<Link
-						style={{color:"#000"}}
-						to={`${process.env.PUBLIC_URL}/pages/authentication/register-simple`}
+						style={{ color: "#000" }}
+						to={`${process.env.REACT_APP_BASE_PATH}/pages/authentication/register-simple`}
 					>
 						ایجاد حساب کاربری
 					</Link>
@@ -36,7 +36,7 @@ const OtherWay = () => {
 			<P attrPara={{ className: "text-center my-4" }}>
 				<Link
 					className="ms-2 fw-bold"
-					to={`${process.env.PUBLIC_URL}/pages/authentication/register-simple`}
+					to={`${process.env.REACT_APP_BASE_PATH}/pages/authentication/register-simple`}
 				>
 					ساخت حساب جديد
 				</Link>

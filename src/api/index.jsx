@@ -1,4 +1,4 @@
-const api = `${process.env.PUBLIC_URL}/api`;
+const api = `${process.env.REACT_APP_BASE_PATH}/api`;
 export const TaskApi = `${api}/task.json`;
 export const BookmarkApi = `${api}/bookmark.json`;
 export const ChartistApi = `${api}/chartistData.json`;

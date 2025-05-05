@@ -6,7 +6,6 @@ import {
 	ForgotPassword,
 	LoginWithJWT,
 	Password,
-	RememberPassword,
 	SignIn,
 } from "../../../Constant";
 
@@ -38,7 +37,7 @@ const LoginTab = ({ selected }) => {
 		setName("Emay Walter");
 		if (email !== "" && password !== "") {
 			localStorage.setItem("login", JSON.stringify(true));
-			history(`${process.env.PUBLIC_URL}/Dashboard/${layoutURL}`);
+			history(`${process.env.REACT_APP_BASE_PATH}/Dashboard/${layoutURL}`);
 		}
 	};
 
@@ -56,7 +55,7 @@ const LoginTab = ({ selected }) => {
 				setValue(man);
 				setName("Emay Walter");
 				localStorage.setItem("token", Jwt_token);
-				window.location.href = `${process.env.PUBLIC_URL}/pages/sample-page/${layoutURL}`;
+				window.location.href = `${process.env.REACT_APP_BASE_PATH}/pages/sample-page/${layoutURL}`;
 				return user;
 			});
 	};
@@ -87,7 +86,7 @@ const LoginTab = ({ selected }) => {
 							type={togglePassword ? "text" : "password"}
 							onChange={(e) => setPassword(e.target.value)}
 							value={password}
-						/>  
+						/>
 						<div
 							className="show-hide"
 							onClick={() => setTogglePassword(!togglePassword)}

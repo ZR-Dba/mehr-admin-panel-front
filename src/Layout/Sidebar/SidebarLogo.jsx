@@ -22,7 +22,7 @@ const SidebarLogo = () => {
 			{layout1 !== "compact-wrapper dark-sidebar" &&
 			layout1 !== "compact-wrapper color-sidebar" &&
 			mixLayout ? (
-				<Link to={`${process.env.PUBLIC_URL}/Dashboard/${layoutURL}`}>
+				<Link to={`${process.env.REACT_APP_BASE_PATH}/Dashboard/${layoutURL}`}>
 					<Image
 						attrImage={{
 							className: "img-fluid d-inline",
@@ -33,7 +33,7 @@ const SidebarLogo = () => {
 					/>
 				</Link>
 			) : (
-				<Link to={`${process.env.PUBLIC_URL}/Dashboard/${layoutURL}`}>
+				<Link to={`${process.env.REACT_APP_BASE_PATH}/Dashboard/${layoutURL}`}>
 					<Image
 						attrImage={{
 							className: "img-fluid d-inline",

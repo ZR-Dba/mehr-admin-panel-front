@@ -44,8 +44,8 @@ const UserHeader = () => {
 		localStorage.removeItem("Name");
 		localStorage.setItem("authenticated", false);
 		localStorage.setItem("login", false);
-		// history(`${process.env.PUBLIC_URL}/login`);
-		window.location.href = `${process.env.PUBLIC_URL}/login`;
+		// history(`${process.env.REACT_APP_BASE_PATH}/login`);
+		window.location.href = `${process.env.REACT_APP_BASE_PATH}/login`;
 	};
 
 	const UserMenuRedirect = (redirect) => {
@@ -93,7 +93,7 @@ const UserHeader = () => {
 		// 			attrLI={{
 		// 				onClick: () =>
 		// 					UserMenuRedirect(
-		// 						`${process.env.PUBLIC_URL}/app/users/userProfile/${layoutURL}`
+		// 						`${process.env.REACT_APP_BASE_PATH}/app/users/userProfile/${layoutURL}`
 		// 					),
 		// 			}}
 		// 		>
@@ -102,14 +102,14 @@ const UserHeader = () => {
 		// 		</LI>
 		// 		{/* <LI
 		//       attrLI={{
-		//         onClick: () => UserMenuRedirect(`${process.env.PUBLIC_URL}/app/email-app/${layoutURL}`),
+		//         onClick: () => UserMenuRedirect(`${process.env.REACT_APP_BASE_PATH}/app/email-app/${layoutURL}`),
 		//       }}>
 		//       <Mail />
 		//       <span>{Inbox}</span>
 		//     </LI>
 		//     <LI
 		//       attrLI={{
-		//         onClick: () => UserMenuRedirect(`${process.env.PUBLIC_URL}/app/todo-app/todo/${layoutURL}`),
+		//         onClick: () => UserMenuRedirect(`${process.env.REACT_APP_BASE_PATH}/app/todo-app/todo/${layoutURL}`),
 		//       }}>
 		//       <FileText />
 		//       <span>{Taskboard}</span>
@@ -160,7 +160,7 @@ const UserHeader = () => {
 						attrLI={{
 							onClick: () =>
 								UserMenuRedirect(
-									`${process.env.PUBLIC_URL}/app/users/userProfile/${layoutURL}`
+									`${process.env.REACT_APP_BASE_PATH}/app/users/userProfile/${layoutURL}`
 								),
 						}}
 					>
