@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import Callback from "../Auth/Callback";
 import Signin from "../Auth/Signin";
+import SignUpForm from "../Components/SignUpForm";
 import { classes } from "../Data/Layouts";
 import LayoutRoutes from "../Route/LayoutRoutes";
 import {
@@ -104,6 +105,7 @@ const Routers = () => {
 
 				<Route path="/callback" element={<Callback />} />
 				<Route exact path="/login" element={<Signin />} />
+				<Route exact path="/signup" element={<SignUpForm />} />
 
 				{authRoutes.map(({ path, Component }, i) => (
 					<Route path={path} element={Component} key={i} />
