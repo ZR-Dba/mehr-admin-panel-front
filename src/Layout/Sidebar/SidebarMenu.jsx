@@ -36,33 +36,42 @@ const SidebarMenu = ({ setMainMenu, props, sidebartoogle, setNavActive, activeCl
 
 
   return (
-    <nav className="sidebar-main" id="sidebar-main">
-      <div className="left-arrow" onClick={scrollToLeft}>
-        <ArrowLeft />
-      </div>
-      <div
-        id="sidebar-menu"
-        style={
-          wrapper.split(' ').includes('horizontal-wrapper')
-            ? { marginLeft: margin + 'px' }
-            : { margin: '0px' }
-        }
-      >
-        <ul className="sidebar-links custom-scrollbar">
-          <li className="back-btn">
-            <div className="mobile-back text-end">
-              <span>{'Back'}</span>
-              <i className="fa fa-angle-right ps-2" aria-hidden="true"></i>
-            </div>
-          </li>
-          <SidebarMenuItems setMainMenu={setMainMenu} props={props} sidebartoogle={sidebartoogle} setNavActive={setNavActive} activeClass={activeClass} />
-        </ul>
-      </div>
-      <div className="right-arrow" onClick={scrollToRight}>
-        <ArrowRight />
-      </div>
-    </nav>
-  );
+		<nav className="sidebar-main" id="sidebar-main">
+			<div className="left-arrow" onClick={scrollToLeft}>
+				<ArrowLeft />
+			</div>
+			<div
+				id="sidebar-menu"
+				style={
+					wrapper.split(" ").includes("horizontal-wrapper")
+						? { marginLeft: margin + "px" }
+						: { margin: "0px" }
+				}
+			>
+				<ul
+					className="sidebar-links custom-scrollbar"
+					style={{marginTop: "55px"}}
+				>
+					<li className="back-btn">
+						<div className="mobile-back text-end">
+							<span>{"Back"}</span>
+							<i className="fa fa-angle-right ps-2" aria-hidden="true"></i>
+						</div>
+					</li>
+					<SidebarMenuItems
+						setMainMenu={setMainMenu}
+						props={props}
+						sidebartoogle={sidebartoogle}
+						setNavActive={setNavActive}
+						activeClass={activeClass}
+					/>
+				</ul>
+			</div>
+			<div className="right-arrow" onClick={scrollToRight}>
+				<ArrowRight />
+			</div>
+		</nav>
+	);
 
 };
 

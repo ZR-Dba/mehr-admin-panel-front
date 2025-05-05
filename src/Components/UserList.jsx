@@ -52,6 +52,7 @@ const UsersList = () => {
 			name: "سطح",
 			selector: (row) => row.phone,
 			sortable: true,
+			width: "150px",
 			cell: (row) => <div style={{ whiteSpace: "nowrap" }}>{row.phone}</div>,
 		},
 		{
