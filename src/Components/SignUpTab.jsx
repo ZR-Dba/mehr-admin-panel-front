@@ -84,7 +84,7 @@ function SignUpTab() {
 				</Btn>
 				<Btn
 					attrBtn={{
-						color: "primary",
+						color: "success",
 						className: "d-block w-100 mt-4",
 						onClick: ()=>{history(`${process.env.REACT_APP_BASE_PATH}/login`);},
 					}}
