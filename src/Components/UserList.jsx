@@ -25,7 +25,7 @@ const UsersList = () => {
 	// table columns
 	const columns = [
 		{
-			name: "کد",
+			name: "کد کاربر",
 			selector: (row) => row.id,
 			sortable: true,
 			// width: "120px",
