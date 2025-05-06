@@ -1,9 +1,11 @@
 import React, { Fragment, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Form, FormGroup, Input, Label } from "reactstrap";
 import { Btn, H4 } from "../AbstractElements";
 import { EmailAddress, Password, reEnterPassword } from "../Constant";
 
 function SignUpTab() {
+	const history = useNavigate();
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
 	const [reEnterpassword, setReEnterPassword] = useState("");
@@ -74,11 +76,20 @@ function SignUpTab() {
 				<Btn
 					attrBtn={{
 						color: "primary",
-                        className: "d-block w-100 mt-5",
+						className: "d-block w-100 mt-5",
 						onClick: (e) => CreateNewAccount(e),
 					}}
 				>
 					ایجاد حساب
+				</Btn>
+				<Btn
+					attrBtn={{
+						color: "primary",
+						className: "d-block w-100 mt-4",
+						onClick: ()=>{history(`${process.env.REACT_APP_BASE_PATH}/login`);},
+					}}
+				>
+					بازگشت به صفحه ورود
 				</Btn>
 			</Form>
 		</Fragment>
